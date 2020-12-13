@@ -1,0 +1,13 @@
+current directory: /Users/hiro/blockchk/vendor/bundle/ruby/2.7.0/gems/json-2.3.1/ext/json
+/usr/local/opt/ruby/bin/ruby -I /usr/local/Cellar/ruby/2.7.2/lib/ruby/2.7.0 -r ./siteconf20201210-5066-d97zbx.rb extconf.rb
+creating Makefile
+
+current directory: /Users/hiro/blockchk/vendor/bundle/ruby/2.7.0/gems/json-2.3.1/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/hiro/blockchk/vendor/bundle/ruby/2.7.0/gems/json-2.3.1/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/hiro/blockchk/vendor/bundle/ruby/2.7.0/gems/json-2.3.1/ext/json
+make "DESTDIR=" install

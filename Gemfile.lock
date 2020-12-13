@@ -1,0 +1,22 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    chronic (0.10.2)
+    httpclient (2.8.3)
+    json (2.3.1)
+    slack-incoming-webhooks (0.3.0)
+    whenever (1.0.0)
+      chronic (>= 0.6.3)
+
+PLATFORMS
+  ruby
+  x86_64-darwin-20
+
+DEPENDENCIES
+  httpclient
+  json
+  slack-incoming-webhooks
+  whenever
+
+BUNDLED WITH
+   2.2.0
