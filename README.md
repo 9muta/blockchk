@@ -2,6 +2,7 @@
 
 ## 概要
 bitcoinのexplorerであるblockchain.infoとbitcoindのブロック差分を比較して3ブロック以上差分がある場合はslackに通知します。
+
 blochchain.infoのapi情報
 https://www.blockchain.com/ja/api/blockchain_api
 
