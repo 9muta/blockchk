@@ -5,22 +5,21 @@ require 'json'
 require 'slack/incoming/webhooks'
 
 
-def _postSlack(diffmsg) 
-  webhook = 'https://hooks.slack.com/services/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'
-  slackname = 'HeightDiffCheck'
+def _postSlack(msg) 
+  webhook = 'SLACK_WEBHOOK_URL'
+  slackname = 'SLACK_POST_USERNAME'
 
   slack = Slack::Incoming::Webhooks.new webhook, username: slackname 
-  slack.post diffmsg
+  slack.post msg
 end 
 
 def _getExpHeight()
   explorer_url = 'https://blockchain.info/latestblock'
   cli = HTTPClient.new()
   res = cli.get(explorer_url)
-  #res.status = 401
 
   if res.status != 200 then
-    #puts res.status
+    puts res.status
     return nil
   end
 
@@ -29,9 +28,9 @@ def _getExpHeight()
 end
 
 def _getBitdHeight()
-  bitcoind_url = ''
-  user = ''
-  password = ''
+  bitcoind_url = 'BITCOIND_URL'
+  user = 'BITCOIND_USER'
+  password = 'BITCOIND_PASSWORD'
 
   cli = HTTPClient.new()
   json = '{"jsonrpc":"1.0","id":"","method":"getblockcount","params":[]}'
@@ -58,8 +57,5 @@ def _chkHeight(expHeight, bitdHeight)
   end
 end
 
-expHeight = _getExpHeight()
-bitdHeight = _getBitdHeight()
-
-_chkHeight(expHeight, bitdHeight)
+_chkHeight(_getExpHeight(), _getBitdHeight())
 
