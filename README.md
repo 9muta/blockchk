@@ -15,12 +15,9 @@ gem bundle init
 ```
 Gemfileに以下を追加
 ```
-# gem "rails"
 gem 'httpclient'
 gem 'json'
 gem 'slack-incoming-webhooks'
-
-# cron
 gem 'whenever', require: false
 ```
 gemをインストール
