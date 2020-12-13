@@ -27,4 +27,23 @@ gemをインストール
 ```
 bundle install
 ```
-zshで
+zshで使用する場合の設定
+~/.zshrcに以下を追加
+```
+export PATH="$HOME/.rbenv/shims:$PATH"
+eval "$(rbenv init - zsh)"
+```
+
+## バッチの実行
+
+```
+bundle exec whenever # 登録内容の確認
+
+crontab -l # 現在の登録を確認
+
+bundle exec whenever --update-crontab 　# バッチの登録
+```
+## バッチの終了
+```
+bundle exec whenever --clear-crontab
+```
