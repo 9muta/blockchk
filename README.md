@@ -2,6 +2,7 @@
 
 ## 概要
 bitcoinのexplorerであるblockchain.infoとbitcoindのブロック差分を比較して3ブロック以上差分がある場合はslackに通知します。
+zshでの使用を前提としています。
 
 blochchain.infoのapi情報
 https://www.blockchain.com/ja/api/blockchain_api
@@ -24,7 +25,6 @@ gemをインストール
 ```
 bundle install
 ```
-zshで使用する場合の設定
 ~/.zshrcに以下を追加
 ```
 export PATH="$HOME/.rbenv/shims:$PATH"
