@@ -58,4 +58,3 @@ def _chkHeight(expHeight, bitdHeight)
 end
 
 _chkHeight(_getExpHeight(), _getBitdHeight())
-
